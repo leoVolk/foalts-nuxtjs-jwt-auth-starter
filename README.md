@@ -1,6 +1,6 @@
 # foalts-nuxtjs-jwt-auth-starter
 
-A starter project with basic jwt authentication using [FoalTS](https://foalts.org/) as backend end [Nuxt.js](https://nuxtjs.org/).
+A starter project with basic jwt authentication using [FoalTS](https://foalts.org/) as backend and [Nuxt.js](https://nuxtjs.org/) as frontend.
 
 
 ## Install
