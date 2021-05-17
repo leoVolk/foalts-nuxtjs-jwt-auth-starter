@@ -28,6 +28,14 @@ $ npm run develop
 
 TODO
 
+
+## Flow
+
+Login Page can be found under /login
+Register Page can be found under /register
+
+There is also a /me Page, that does not show anything but can only be accessed when logged in.
+
 ## Authors
 
 - **Leonhard Volkmann** - _Initial work & developement_
