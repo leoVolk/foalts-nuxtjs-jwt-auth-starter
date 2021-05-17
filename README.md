@@ -12,8 +12,11 @@ $ npm i
 
 $cd /backend
 $npm i
-
+$npm run migrations
+$foal createsecret
 ```
+
+Put the secret token under JWT_SECRET="YOUR_SECRET_KEY_HERE" insde a .env file, based in the /backend folder.
 
 ## Run
 Will open development server on port 3001.
