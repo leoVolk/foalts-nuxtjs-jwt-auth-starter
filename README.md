@@ -21,7 +21,7 @@ Put the secret token under JWT_SECRET="YOUR_SECRET_KEY_HERE" insde a .env file, 
 ## Run
 Will open development server on port 3001.
 ```bash
-# install dependencies
+# run with hot reload on :3001
 $ cd /backend
 $ npm run develop
 
