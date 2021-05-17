@@ -23,3 +23,11 @@ $ cd /backend
 $ npm run develop
 
 ```
+
+## Build
+
+TODO
+
+## Authors
+
+- **Leonhard Volkmann** - _Initial work & developement_
