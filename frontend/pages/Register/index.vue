@@ -7,7 +7,7 @@
           <h1 class="h3 mb-3 font-weight-normal">Welcome!</h1>
           <label for="inputUsername" class="sr-only">Username</label>
           <input
-            v-model="login.email"
+            v-model="login.username"
             type="text"
             id="inputUsername"
             class="form-control"
@@ -63,7 +63,7 @@ export default {
         password: '',
         username: '',
       },
-    }
+    };
   },
   methods: {
     async userRegister() {
@@ -72,18 +72,18 @@ export default {
           email: this.login.email,
           password: this.login.password,
           username: this.login.username,
-        })
+        });
         if (response.status === 200) {
           this.$auth
             .setUserToken(response.data.token)
-            .then(() => this.$router.push('/'))
+            .then(() => this.$router.push('/'));
         }
       } catch (err) {
-        console.log(err)
+        console.log(err);
       }
     },
   },
-}
+};
 </script>
 
 <style>
