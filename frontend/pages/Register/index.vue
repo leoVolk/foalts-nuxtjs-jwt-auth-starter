@@ -2,7 +2,7 @@
   <div class="container-fluid mt-5 h-100">
     <div class="row justify-content-center h-100">
       <div class="col-12 card col-lg-3 shadow align-self-center">
-        <form @submit.prevent="userLogin" class="form-register py-4">
+        <form @submit.prevent="userRegister" class="form-register py-4">
           <img class="mb-4" alt="" width="72" height="72" />
           <h1 class="h3 mb-3 font-weight-normal">Welcome!</h1>
           <label for="inputUsername" class="sr-only">Username</label>
@@ -11,7 +11,7 @@
             type="text"
             id="inputUsername"
             class="form-control"
-            placeholder="Email address"
+            placeholder="Username"
             required=""
             autofocus=""
           />
