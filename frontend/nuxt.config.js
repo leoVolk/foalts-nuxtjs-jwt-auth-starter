@@ -1,5 +1,6 @@
 module.exports = {
   srcDir: '../frontend',
+  mode: 'spa',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'frontend',
