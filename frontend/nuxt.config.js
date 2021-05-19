@@ -72,7 +72,7 @@ module.exports = {
         endpoints: {
           login: { url: '/auth/login', method: 'post' },
           logout: { url: '/auth/logout', method: 'post' },
-          user: { url: '/auth/user', method: 'get' },
+          user: { url: '/api/user', method: 'get' },
         },
       },
     },
@@ -80,4 +80,4 @@ module.exports = {
   router: {
     middleware: ['auth'],
   },
-}
+};

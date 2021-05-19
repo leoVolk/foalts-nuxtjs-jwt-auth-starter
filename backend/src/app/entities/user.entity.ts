@@ -1,4 +1,10 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import {
+  BaseEntity,
+  BeforeInsert,
+  Column,
+  Entity,
+  PrimaryGeneratedColumn,
+} from "typeorm";
 
 import { hashPassword } from "@foal/core";
 
@@ -16,6 +22,7 @@ export class User extends BaseEntity {
   @Column()
   password: string;
 
+  @BeforeInsert()
   async setPassword(password: string) {
     this.password = await hashPassword(password);
   }

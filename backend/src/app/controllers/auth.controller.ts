@@ -1,8 +1,5 @@
 import {
   Context,
-  Get,
-  HttpResponseConflict,
-  HttpResponseNotFound,
   HttpResponseOK,
   HttpResponseUnauthorized,
   Post,
@@ -38,7 +35,7 @@ export class AuthController {
     const user = new User();
     user.email = ctx.request.body.email;
     user.username = ctx.request.body.username;
-    user.password = await hashPassword(ctx.request.body.password);
+    user.password = await ctx.request.body.password;
     await user.save();
 
     const token = sign({ email: user.email }, getSecretOrPrivateKey(), {
@@ -73,18 +70,6 @@ export class AuthController {
     const response = new HttpResponseOK();
     removeAuthCookie(response);
     return response;
-  }
-
-  @JWTRequired()
-  @Get("/user")
-  async user(ctx: Context) {
-    const user = await User.findOne({ email: ctx.user.email });
-
-    if (!user) {
-      return new HttpResponseNotFound();
-    }
-
-    return new HttpResponseOK({ user });
   }
 
   private async createJWT(user: User): Promise<string> {

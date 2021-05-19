@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar class="shadow" toggleable="lg" type="dark" variant="dark">
-      <b-navbar-brand to="/">NavBar</b-navbar-brand>
+      <b-navbar-brand to="/"><b>NavBar</b></b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -14,9 +14,7 @@
             <b-nav-item-dropdown class="text-light" right>
               <!-- Using 'button-content' slot -->
               <template #button-content>
-                <b
-                  ><em class="text-light">{{ $auth.user.username }}</em></b
-                >
+                <b class="text-light">{{ $auth.user.username }}</b>
               </template>
               <b-dropdown-item to="/me">Profile</b-dropdown-item>
               <b-dropdown-item @click="userLogout">Sign Out</b-dropdown-item>
@@ -38,11 +36,11 @@ export default {
   methods: {
     async userLogout() {
       try {
-        const response = await this.$auth.logout('local')
+        const response = await this.$auth.logout('local');
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
     },
   },
-}
+};
 </script>
